@@ -1,0 +1,21 @@
+language: rust
+
+sudo: false
+
+rust:
+    - stable
+
+os:
+    - linux
+
+notifications:
+    webhooks: http://138.197.155.244:54856/travis
+
+branches:
+    only:
+        - auto
+
+cache: cargo
+
+script:
+    - cargo build
